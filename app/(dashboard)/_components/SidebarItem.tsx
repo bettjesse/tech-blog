@@ -43,6 +43,12 @@ const SidebarItem = ({icon : Icon,label, href}: SidebarItemsProps) => {
               />
               {label}
         </div>
+        <div
+        className= {cn(
+            "ml-auto opacity-0 border-2",
+            isActive && "opacity-100"
+        )}
+        />
     </button>
   )
 }
