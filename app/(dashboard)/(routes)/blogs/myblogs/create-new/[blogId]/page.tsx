@@ -4,6 +4,8 @@ import { redirect } from "next/navigation"
 import IconBadge from "@/components/IconBadge"
 import { LayoutDashboard } from "lucide-react"
 import TitleForm from "./_components/TitleForm"
+import DescriptionForm from "./_components/DescriptionForm"
+import ImageForm from "./_components/ImageForm"
 
 interface BlogIdProps {
     params:{
@@ -39,7 +41,7 @@ const BlogIdPage =  async({params}:BlogIdProps) => {
         <div className=" flex items-center justify-between ">
             <div className="flex flex-col gap-y-2">
                 <h1 className="text-2xl font-medium">
-   Blog set up {blog.id}
+   Blog set up 
                 </h1>
                 <span className=" text-sm text-gray-900"> complete all fields {completionText} </span>
            
@@ -63,6 +65,16 @@ const BlogIdPage =  async({params}:BlogIdProps) => {
 </div>
 
 <TitleForm
+initialData = {blog}
+blogId ={blog.id}
+
+/>
+<DescriptionForm
+initialData = {blog}
+blogId ={blog.id}
+
+/>
+<ImageForm
 initialData = {blog}
 blogId ={blog.id}
 
