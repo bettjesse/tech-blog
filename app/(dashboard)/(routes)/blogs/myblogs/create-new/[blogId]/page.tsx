@@ -6,6 +6,8 @@ import { LayoutDashboard } from "lucide-react"
 import TitleForm from "./_components/TitleForm"
 import DescriptionForm from "./_components/DescriptionForm"
 import ImageForm from "./_components/ImageForm"
+import CategoriesForm from "./_components/CategoriesForm"
+import { Label } from "@radix-ui/react-label"
 
 interface BlogIdProps {
     params:{
@@ -19,11 +21,20 @@ const BlogIdPage =  async({params}:BlogIdProps) => {
 
         return redirect("/")
     }
+
+   
     const blog = await db.blog.findUnique({
         where:{
             id :params.blogId
         }
     })
+
+    const categories = await db.category.findMany({
+        orderBy :{
+            name:"asc"
+        }
+    })
+ 
     if(!blog){
         return redirect("/")
     }
@@ -77,6 +88,15 @@ blogId ={blog.id}
 <ImageForm
 initialData = {blog}
 blogId ={blog.id}
+
+/>
+<CategoriesForm
+initialData = {blog}
+blogId ={blog.id}
+options={categories.map((category)=>({
+    label: category.name,
+    value :category.id
+}))}
 
 />
     </div>
