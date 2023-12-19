@@ -8,6 +8,7 @@ import DescriptionForm from "./_components/DescriptionForm"
 import ImageForm from "./_components/ImageForm"
 import CategoriesForm from "./_components/CategoriesForm"
 import { Label } from "@radix-ui/react-label"
+import { BlogContentForm } from "./_components/BlogContentForm"
 
 interface BlogIdProps {
     params:{
@@ -97,6 +98,12 @@ options={categories.map((category)=>({
     label: category.name,
     value :category.id
 }))}
+
+/>
+<BlogContentForm
+initialData = {blog}
+blogId ={blog.id}
+
 
 />
     </div>

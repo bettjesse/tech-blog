@@ -16,6 +16,7 @@ model Blog {
   title String 
   description String?
   imageUrl String?
+  blogContent String?
   isPublished Boolean @default(false)
   categoryId String? @db.ObjectId
 
