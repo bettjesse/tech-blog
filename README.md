@@ -55,6 +55,7 @@ NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL: URL to redirect users after signing up.
 
 
 Database Configuration
+
 For the database connection, ensure the DATABASE_URL is set with the appropriate connection string:
 
 DATABASE_URL: Connection string for MongoDB (or replace it with the appropriate string for your database).
@@ -65,6 +66,7 @@ UploadThing Configuration
 For image uploads using UploadThing, provide the following variables:
 
 UPLOADTHING_SECRET: UploadThing's secret key for secure file uploads.
+
 UPLOADTHING_APP_ID: UploadThing's application ID for identification.
 
 
