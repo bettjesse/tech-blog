@@ -12,7 +12,7 @@ import toast from "react-hot-toast"
 
 import { Blog } from "@prisma/client"
 import Image from "next/image"
-import FileUpload from "@/components/file-upload"
+import { FileUpload } from "@/components/file-upload"
 interface ImageFormProps {
     initialData :Blog
     
@@ -44,7 +44,7 @@ const ImageForm = ({initialData,blogId}: ImageFormProps) => {
   return (
     <div className=" mt-6 border bg-slate-100 rounded-md p-4">
         <div className=" font-medium flex items-center justify-between">
-     Blog image
+     Blog image (optional)
       <Button onClick={toggleEdit} variant= "ghost">
         {isEditing && (
             <>cancel</>

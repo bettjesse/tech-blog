@@ -10,7 +10,7 @@ interface FileUploadProps {
 }
 
 
-const FileUpload = ({onChange,endpoint}: FileUploadProps)=> {
+export const FileUpload = ({onChange,endpoint}: FileUploadProps)=> {
 
     return (
         <UploadDropzone
@@ -24,4 +24,3 @@ const FileUpload = ({onChange,endpoint}: FileUploadProps)=> {
         />
     )
 }
-export default FileUpload

@@ -9,6 +9,37 @@ interface Params {
 
 }
 
+export async function DELETE( req: Request,{ params}:Params) {
+    try {
+
+        const {userId}= auth()
+        const { blogId } = params;
+        if(!userId) {
+            return new NextResponse("Unauthorized", {status:401})
+        }
+
+            const blog = await db.blog.findUnique({
+                where :{
+                    id: blogId,
+                    userId: userId
+                }
+            })
+  if (!blog) {
+    return new NextResponse("Not found", {status: 404})
+  }
+  const deleteBlog = await db.blog.delete({
+    where :{
+        id: blogId
+    }
+  })
+  return NextResponse.json(deleteBlog)
+       
+    }catch(error) {
+        console.log("[BLOG-ID-DELETE]", error)
+        return new NextResponse("Internal error", {status: 500})
+    }
+}
+
 export async function PATCH( req: Request,{ params}:Params) {
 
     try {
@@ -21,7 +52,7 @@ export async function PATCH( req: Request,{ params}:Params) {
         const blog = await db.blog.update({
             where :{
                 id : blogId,
-                userId
+            userId
             },
             data:{
                 ...values
@@ -36,3 +67,4 @@ export async function PATCH( req: Request,{ params}:Params) {
     }
 
 }
+
