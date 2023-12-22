@@ -1,7 +1,9 @@
 Tech Blog App
+
 This Tech Blog App is designed for tech enthusiasts, engineers, designers, and anyone in the tech community to collaborate and share tech-related blogs across various categories. Whether it's about front-end development, back-end architecture, UI/UX design, system design, interview tips, or anything related to the tech world, this platform fosters a space for learning and collaboration.
 
 Features
+
 Categories: Blogs are organized into different categories such as front-end, back-end, UI/UX, system design, interview preparation, and more.
 Technologies Used:
 Next.js: Utilized as the fundamental framework for building a React-based web application.
