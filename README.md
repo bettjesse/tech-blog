@@ -31,9 +31,7 @@ Run the Development Server: npm run dev or yarn dev
 
 Open http://localhost:3000 in your browser to access the app.
 
-Contribution
 
-Contributions are welcome! Whether it's bug fixes, feature enhancements, or additional categories for the blog, feel free to contribute by submitting pull requests. Please adhere to the existing code style and conventions.
 
 
 Environment Variables
@@ -60,7 +58,10 @@ Database Configuration
 For the database connection, ensure the DATABASE_URL is set with the appropriate connection string:
 
 DATABASE_URL: Connection string for MongoDB (or replace it with the appropriate string for your database).
+
 UploadThing Configuration
+
+
 For image uploads using UploadThing, provide the following variables:
 
 UPLOADTHING_SECRET: UploadThing's secret key for secure file uploads.
