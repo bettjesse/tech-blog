@@ -27,7 +27,10 @@ Technologies Used:
 
 To start developing:
 
-Clone the Repository:` git clone https://github.com/bettjesse/tech-blog.git `
+Clone the Repository:
+```shell
+git clone https://github.com/bettjesse/tech-blog.git
+ ```
 
 Install Dependencies: `npm install `
 
