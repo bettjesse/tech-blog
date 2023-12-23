@@ -5,7 +5,7 @@ This Tech Blog App is designed for tech enthusiasts, engineers, designers, and a
 ## Features
 
 Categories: Blogs are organized into different categories such as front-end, back-end, UI/UX, system design, interview preparation, and more.
-Technologies Used:
+
 
 1. Browse and Filter Blogs
 2. Create New Blog
