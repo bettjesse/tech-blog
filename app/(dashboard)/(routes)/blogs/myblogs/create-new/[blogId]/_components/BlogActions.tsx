@@ -7,6 +7,8 @@ import toast from "react-hot-toast"
 import { useState } from "react"
 import axios from "axios"
 import { useRouter } from "next/navigation"
+import { useAppDispatch, useAppSelector } from "@/app/redux/hooks"
+import { openConfetti } from "@/app/redux/slice/confeti-slice"
 
 interface ChapterActionProps {
     disabled: boolean
@@ -16,18 +18,21 @@ interface ChapterActionProps {
 
 const BlogActions = ({disabled, blogId , isPublished}:ChapterActionProps) => {
     const router = useRouter()
-
+    const dispatch = useAppDispatch()
+//    const openConfetti = useAppSelector((state)=> state.confetti.isOpen)
     const [isLoading, setIsloading] = useState(false)
 
     const publishUnpublish = async()=> {
         try {
 if(isPublished){
     await axios.patch(`/api/blogs/${blogId}/unpublish`)
-    toast.success("course unpublished")
+    toast.success("Blog unpublished")
+   
 }
 else{
     await axios.patch(`/api/blogs/${blogId}/publish`)
-    toast.success("course published")
+    toast.success("Blog published")
+    dispatch(openConfetti())
 }
 router.refresh()
         } catch(error) {
