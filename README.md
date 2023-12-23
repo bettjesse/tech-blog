@@ -29,9 +29,9 @@ To start developing:
 
 Clone the Repository:` git clone https://github.com/bettjesse/tech-blog.git `
 
-Install Dependencies: npm install or yarn install
+Install Dependencies: `npm install `
 
-Run the Development Server: npm run dev or yarn dev
+Run the Development Server: `npm run dev `
 
 Open http://localhost:3000 in your browser to access the app.
 
@@ -45,9 +45,9 @@ This application requires certain environment variables to be set up in a .env f
 Clerk Authentication
 For Clerk authentication, you'll need the following variables related to Clerk's setup:
 
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: Clerk's public key for client-side authentication.
+```NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ""```
 
-CLERK_SECRET_KEY: Clerk's secret key for server-side authentication.
+`CLERK_SECRET_KEY: Clerk's secret key for server-side authentication.
 
 NEXT_PUBLIC_CLERK_SIGN_IN_URL: URL for signing in using Clerk.
 
