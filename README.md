@@ -27,16 +27,17 @@ Technologies Used:
 
 To start developing:
 
-Clone the Repository:
+### Clone the Repository:
 ```shell
 git clone https://github.com/bettjesse/tech-blog.git
  ```
 
-Install Dependencies: `npm install `
+### Install Dependencies:
+```shell
+ npm install 
+```
 
-Run the Development Server: `npm run dev `
 
-Open http://localhost:3000 in your browser to access the app.
 
 
 
@@ -45,36 +46,54 @@ Open http://localhost:3000 in your browser to access the app.
 This application requires certain environment variables to be set up in a .env file in the project root directory. Below are the variables and their purposes:
 
 
-Clerk Authentication
-For Clerk authentication, you'll need the following variables related to Clerk's setup:
-
-```NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ""```
-
-`CLERK_SECRET_KEY: Clerk's secret key for server-side authentication.
-
-NEXT_PUBLIC_CLERK_SIGN_IN_URL: URL for signing in using Clerk.
-
-NEXT_PUBLIC_CLERK_SIGN_UP_URL: URL for signing up using Clerk.
-
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: URL to redirect users after signing in.
-
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL: URL to redirect users after signing up.
 
 
-## Database Configuration
+```js
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
 
-For the database connection, ensure the DATABASE_URL is set with the appropriate connection string:
+CLERK_SECRET_KEY=
 
-DATABASE_URL: Connection string for MongoDB (or replace it with the appropriate string for your database).
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=
 
-UploadThing Configuration
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=
+
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=
+
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=
+UPLOADTHING_SECRET=
+
+UPLOADTHING_APP_ID=
+
+DATABASE_URL=
+```
+
+## Set up prisma
+
+Add MongoDB Database
+
+```shell
+npx prisma generate
+npx prisma db push
+
+```
+### Start the app
+
+```shell
+npm run dev
+```
+
+## Available commands
+
+Running commands with npm `npm run [command]`
+
+| command         | description                              |
+| :-------------- | :--------------------------------------- |
+| `dev`           | Starts a development instance of the app |
 
 
-For image uploads using UploadThing, provide the following variables:
 
-UPLOADTHING_SECRET: UploadThing's secret key for secure file uploads.
 
-UPLOADTHING_APP_ID: UploadThing's application ID for identification.
+
 
 
 
