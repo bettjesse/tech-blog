@@ -19,7 +19,7 @@ const guestRoutes = [
     {
         icon : PlusCircle,
         label: "Write",
-        href : "/blogs/myblogs"
+        href : "/blogs/myblogs/published"
     },
     
 ]

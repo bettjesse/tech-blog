@@ -43,6 +43,10 @@ blogId
   const toggleEdit = () => setIsEditing((current) => !current);
 
   const router = useRouter();
+  const stripHtmlTags = (html: string) => {
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    return doc.body.textContent || '';
+  };
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -55,7 +59,10 @@ blogId
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-        await axios.patch(`/api/blogs/${blogId}`, values)
+    const strippedContent = stripHtmlTags(values.blogContent);
+
+    // Make the API call with the stripped content
+    await axios.patch(`/api/blogs/${blogId}`, { blogContent: strippedContent });
       toast.success("Blog updated");
       toggleEdit();
       router.refresh();
