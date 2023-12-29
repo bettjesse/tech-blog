@@ -1,10 +1,20 @@
+import { db } from "@/lib/db"
+import Categories from "../_components/Categories"
 
-import { UserButton } from "@clerk/nextjs"
-const page = () => {
+const page = async() => {
+
+  const categories = await db.category.findMany({
+    orderBy :{
+      name: "asc"
+    }
+  })
   return (
-    <div> 
-        <UserButton afterSignOutUrl="/"
-        />
+    <div className="p-6"> 
+       <Categories
+       items = {categories}
+       
+       />
+      
     </div>
   )
 }

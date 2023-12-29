@@ -1,6 +1,6 @@
 "use client"
 
-import { Compass, Folder, Layout, PlusCircle, Target } from "lucide-react"
+import { Book, Compass, Folder, Layout, PlusCircle, Target } from "lucide-react"
 import { Sidebar } from "./sidebar"
 import SidebarItem from "./SidebarItem"
 import { usePathname } from "next/navigation"
@@ -19,6 +19,11 @@ const guestRoutes = [
     {
         icon : PlusCircle,
         label: "Write",
+        href : "/blogs/create-new"
+    },
+    {
+        icon : Book,
+        label: "MyBlogs",
         href : "/blogs/myblogs/published"
     },
     
