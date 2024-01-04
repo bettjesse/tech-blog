@@ -1,7 +1,7 @@
 "use client"
 
 import { Book, Compass, Folder, Layout, PlusCircle, Target } from "lucide-react"
-import { Sidebar } from "./sidebar"
+// import Sidebar from "./Sidebar"
 import SidebarItem from "./SidebarItem"
 import { usePathname } from "next/navigation"
 
