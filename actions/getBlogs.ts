@@ -1,4 +1,4 @@
-// 
+
 import { Category, Blog } from "@prisma/client";
 import { db } from "@/lib/db";
 
