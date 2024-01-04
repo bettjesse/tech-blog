@@ -29,12 +29,12 @@ const SearchInput = () => {
   },[router, debouncedValue, currentCategoryId, patname])
   return (
     <div className=" relative">
-      <Search className="absolute top-3 left-3 w-4 h-4 text-red-600"/>
+      <Search className="absolute top-3 left-3 w-4 h-4 text-blue-700"/>
       <Input 
       value={value}
       onChange={(e)=> setValue(e.target.value)}
       
-      className="w-full md:w-[300px] pl-9 rounded-full focus-visible:ring-red-200 bg-red-100"
+      className="w-full md:w-[300px] pl-9 rounded-full focus-visible:ring-blue-200 bg-blue-200"
       placeholder=" Search for a blog"
       
       />

@@ -92,7 +92,7 @@ const TitleForm = ({initialData,blogId}: TitleFormProps) => {
                     
                     />
                     <div className=" flex items-center gap-x-2">
-                        <Button
+                        <Button  className="bg-orange-400"
                         disabled ={!isValid  || isSubmitting} 
                         type="submit"
                         >

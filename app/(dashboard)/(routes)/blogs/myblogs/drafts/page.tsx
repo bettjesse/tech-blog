@@ -10,6 +10,7 @@ import Link from "next/link";
 
 import { db } from "@/lib/db";
 import { Button } from "@/components/ui/button";
+import { truncateContent } from "@/lib/truncateContent";
 
 // // Function to remove HTML tags
 // const stripHtmlTags = (html: string) => {
@@ -118,7 +119,7 @@ const CoursesPage = async () => {
     <div className="mb-2">
 
     <Link href=  {`/blogs/create-new/${draft.id}`}>   <p className="text-xl font-bold mb-2">{draft.title}</p> </Link>
-      <p className="text-sm text-gray-700 mb-4">{draft.description}</p>
+      <p className="text-sm text-gray-700 mb-4">{ truncateContent(draft.blogContent, 90)}</p>
       <div className=" flex items-center space-x-2">
       <p className="text-sm text-gray-500">Created on: {new Date(draft.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</p>
       <Link href=  {`/blogs/create-new/${draft.id}`}>  <Pencil className="w-4 h-4 cursor-pointer"/> </Link>

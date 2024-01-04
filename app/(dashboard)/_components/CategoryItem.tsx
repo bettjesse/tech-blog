@@ -32,8 +32,8 @@ const CategoryItem = ({label, value}: CategoryItemProps) => {
 }
   return (
     <button className= {cn(
-      "text-sm py-2 px-3 border rounded-full border-red-400 flex  items-center gap-x-1 hover:border-red-800 transition" ,
-      isSelected && "border-red-600 bg-red-200/20 text-red-800"
+      "text-sm py-2 px-3 border rounded-full border-orange-500 flex  items-center gap-x-1 hover:border-orange-800 transition" ,
+      isSelected && "border-orange-900 bg-orange-400 text-black"
     )}
     type="button"
     onClick={onClick}

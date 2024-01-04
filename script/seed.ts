@@ -13,6 +13,10 @@ const main = async()=> {
                  {name : "Mongo db"},
                  {name : "Next js"},
                  {name : "AI"},
+                 {name : "Interview tips"},
+                 {name : "UI library"},
+                 {name : "Redux"},
+                 {name : "Node js"},
                  
               
         

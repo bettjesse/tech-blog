@@ -30,9 +30,7 @@ const NavbarRoutes = () => {
         </Link>
       ):(
         <Link href= "/admin/categories">
-        <Button>
-           Admin mode
-        </Button>
+       
         </Link>
       )}
         <UserButton afterSignOutUrl="/"/>
