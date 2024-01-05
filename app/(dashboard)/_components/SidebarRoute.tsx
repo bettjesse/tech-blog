@@ -11,11 +11,7 @@ const guestRoutes = [
         label: "Blogs",
         href :"/"
     },
-    {
-        icon : Compass,
-        label: "Search",
-        href : "/search"
-    },
+  
     {
         icon : PlusCircle,
         label: "Write",

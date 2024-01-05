@@ -44,11 +44,12 @@ const requiredFields = [
     blog.description,
     blog.categoryId,
     blog.blogContent,
+    blog.imageUrl
   ];
   
-  if (blog.imageUrl) {
-    requiredFields.push(blog.imageUrl);
-  }
+  // if (blog.imageUrl) {
+  //   requiredFields.push(blog.imageUrl);
+  // }
   
   const totalFields = requiredFields.length;
   const completedFields = requiredFields.filter(Boolean).length;
@@ -83,15 +84,15 @@ const requiredFields = [
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
-        <div>
+      <div className="">
+        
           <div className="flex items-center gap-x-2">
             <IconBadge icon={LayoutDashboard} />
             <h2 className=" text-xl">Cutomize your blog</h2>
           </div>
-        </div>
-      </div>
-
+        
+      
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
       <TitleForm initialData={blog} blogId={blog.id} />
       <DescriptionForm initialData={blog} blogId={blog.id} />
       <ImageForm initialData={blog} blogId={blog.id} />
@@ -103,7 +104,10 @@ const requiredFields = [
           value: category.id,
         }))}
       />
+      
+      </div>
       <BlogContentForm initialData={blog} blogId={blog.id} />
+    </div>
     </div>
     </>
   );
