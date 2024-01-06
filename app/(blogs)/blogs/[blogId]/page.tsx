@@ -8,7 +8,7 @@ import { db } from "@/lib/db"
 import { getBlogById } from "@/actions/getBlogs"
 import Image from "next/image"
 interface BlogPageProps {
-    children : React.ReactNode
+   
     params: {
         blogId : string
     }
