@@ -59,9 +59,9 @@ blogId
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-    const strippedContent = stripHtmlTags(values.blogContent);
+  
 
-    // Make the API call with the stripped content
+    
     await axios.patch(`/api/blogs/${blogId}`,  values);
       toast.success("Blog updated");
       toggleEdit();
