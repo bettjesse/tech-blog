@@ -62,7 +62,7 @@ blogId
     const strippedContent = stripHtmlTags(values.blogContent);
 
     // Make the API call with the stripped content
-    await axios.patch(`/api/blogs/${blogId}`, { blogContent: strippedContent });
+    await axios.patch(`/api/blogs/${blogId}`,  blogContent);
       toast.success("Blog updated");
       toggleEdit();
       router.refresh();
